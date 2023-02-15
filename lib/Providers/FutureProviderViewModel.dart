@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:test_reverpod/Services/Apiservices.dart';
 
-final viewModelfutureservice = FutureProvider((ref){
+final viewModelfutureservice = FutureProvider.autoDispose((ref){
   final serviceapi = ref.watch(apiserviceProvider);
   return serviceapi.getUserList();
 }) ;
